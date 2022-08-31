@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    password: Ya1996!A
+    username: root
+    url: jdbc:mysql://localhost:8848/examnation
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    ##如果我们并不是在项目初就加flyway的话，则在有历史数据的情况下，加入flyway后，将会出现：
+#    set baselineOnMigrate to true to initialize the schema history table.解决方法将baselineOnMigrate设置为true。注意，不同版本的设置方法并不相同。有的版本是：spring.flyway.baselineOnMigrate有的则是flyway.baselineOnMigrate
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+
+tigger:
+  name: schedulerJob2
+  group: schedulerGroup2
+
+mybatis:
+  mapper-locations: classpath:/mapper/*
+
